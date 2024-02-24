@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  coinmap.platform.api:
+    image: ${DOCKER_REGISTRY-}coinmap.platform.api
+    ports:
+        - 30001:443
+    build:
+      context: .
+      dockerfile: CoinMap.Platform.Api/Dockerfile
+    depends_on: 
+        - db
+  db:
+    image: mongo
+    container_name: mongo_db
+    ports:
+        - "27017:27017"

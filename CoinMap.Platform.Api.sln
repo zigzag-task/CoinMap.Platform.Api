@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinMap.Platform.Api", "CoinMap.Platform.Api\CoinMap.Platform.Api.csproj", "{92435CC7-FF8A-44BA-89A5-B485215198DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinMap.Platform.Infrastructure", "CoinMap.Platform.Infrastructure\CoinMap.Platform.Infrastructure.csproj", "{257CDE3E-7BCA-4E93-9F79-8761ABA4771B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinMap.Platform.Middleware", "CoinMap.Platform.Middleware\CoinMap.Platform.Middleware.csproj", "{CC766A91-FC85-4733-A721-586AB729369A}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{97B64E2C-9B42-43DF-B1F2-1D0694B2340D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92435CC7-FF8A-44BA-89A5-B485215198DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92435CC7-FF8A-44BA-89A5-B485215198DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92435CC7-FF8A-44BA-89A5-B485215198DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92435CC7-FF8A-44BA-89A5-B485215198DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{257CDE3E-7BCA-4E93-9F79-8761ABA4771B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257CDE3E-7BCA-4E93-9F79-8761ABA4771B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{257CDE3E-7BCA-4E93-9F79-8761ABA4771B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{257CDE3E-7BCA-4E93-9F79-8761ABA4771B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC766A91-FC85-4733-A721-586AB729369A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC766A91-FC85-4733-A721-586AB729369A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC766A91-FC85-4733-A721-586AB729369A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC766A91-FC85-4733-A721-586AB729369A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97B64E2C-9B42-43DF-B1F2-1D0694B2340D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B64E2C-9B42-43DF-B1F2-1D0694B2340D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B64E2C-9B42-43DF-B1F2-1D0694B2340D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B64E2C-9B42-43DF-B1F2-1D0694B2340D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78177774-8D20-4177-9663-EF53D8C03DA0}
+	EndGlobalSection
+EndGlobal
