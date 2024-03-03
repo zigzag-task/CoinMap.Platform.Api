@@ -4,12 +4,14 @@ using CoinMap.Platform.Api.Extensions.Service;
 using CoinMap.Platform.Api.Swagger;
 using CoinMap.Platform.Infrastructure.Extensions.Service;
 using CoinMap.Platform.Middleware.Extensions.Service;
+using CoinMapWeb;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using System.Reflection;
 using System.Text;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -33,7 +35,7 @@ builder.Services.AddSwaggerGen(options =>
     options.OperationFilter<SwaggerDefaultValues>();
 
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    var xmlPath = System.IO.Path.Combine(AppContext.BaseDirectory, xmlFile);
     options.IncludeXmlComments(xmlPath);
 
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -79,6 +81,9 @@ builder.Services.AddApiVersioning(o =>
 
 builder.Services.AddAutoMapperProfiles();
 builder.Services.AddMiddlewareAutoMapperProfiles();
+
+builder.Services.AddHttpClient<CoinMapService>();
+builder.Services.AddRouting().AddGraphQLServer().AddQueryType<CoinMap.Platform.Api.GraphQL.Query>().RegisterService<CoinMapService>();
 
 #region Jwt configuration starts here
 
@@ -176,6 +181,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapGraphQL();
 #endregion
 
 app.Run();
